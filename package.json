@@ -1,0 +1,11 @@
+{
+  "name": "mochila",
+  "version": "1.0.0",
+  "description": "proyecto de la mochila para foc",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Marioandre Pigorini",
+  "license": "ISC"
+}
