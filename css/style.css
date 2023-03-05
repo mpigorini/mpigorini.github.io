@@ -341,11 +341,40 @@ h6,
 
 #huye {
     position: absolute;
-    left: calc(50% - 108px);
-    top: calc(50% + 160px);
-    transition: all 0.001s ease-in-out;
+  top: calc(50% + 200px);
+  left: calc(50% - 8px);
+  transform: translate(-50%, -50%);
 }
   
-#huye:hover {
-    transform: translate(-50px, -50px); /* distancia que el botón se moverá */
+
+@media (max-width: 767px) {
+    #huye {        
+      top: calc(50% + 120px);
+      left: calc(50% - 8px);      
+    }
+}
+
+
+.main-container {
+  
+    background-image: url('../img/carousel-2.jpg');
+    background-size: cover;
+    background-position: center;
+    max-width: 100vw;
+    max-height: 100vh;
+    overflow: hidden;
+}
+
+.main-container .black-content {
+    width:100%;
+    height: 100vh;
+    display: flex;    
+    justify-content: center;
+    text-align: center;
+    align-items: center;    
+
+    background-color: rgba(10, 10, 27, 0.8);
+}
+body {
+    overflow: hidden;
 }
