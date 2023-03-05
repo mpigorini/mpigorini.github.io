@@ -1,9 +1,9 @@
 /********** Template CSS **********/
 :root {
-    --primary: #06A3DA;
-    --secondary: #F57E57;
-    --light: #EEF9FF;
-    --dark: #091E3E;
+    --primary: #06a3da;
+    --secondary: #e23232;
+    --light: #ffeeee;
+    --dark: #091e3e;
 }
 
 h1,
@@ -25,24 +25,24 @@ h6,
 }
 
 .btn {
-    font-family: 'Jost', sans-serif;
+    font-family: "Jost", sans-serif;
     font-weight: 600;
-    transition: .5s;
+    transition: 0.5s;
 }
 
 .btn-primary,
 .btn-secondary {
-    color: #FFFFFF;
+    color: #ffffff;
 }
 
-.btn-primary:hover {
+/* .btn-primary:hover {
     background: var(--secondary);
     border-color: var(--secondary);
-}
+}*/
 
-.btn-secondary:hover {
-    background: var(--primary);
-    border-color: var(--primary);
+.btn-secondary {
+    background: var(--secondary);
+    border-color: var(--secondary);
 }
 
 .btn-square {
@@ -71,12 +71,12 @@ h6,
 #spinner {
     opacity: 0;
     visibility: hidden;
-    transition: opacity .5s ease-out, visibility 0s linear .5s;
+    transition: opacity 0.5s ease-out, visibility 0s linear 0.5s;
     z-index: 99999;
 }
 
 #spinner.show {
-    transition: opacity .5s ease-out, visibility 0s linear 0s;
+    transition: opacity 0.5s ease-out, visibility 0s linear 0s;
     visibility: visible;
     opacity: 1;
 }
@@ -101,12 +101,12 @@ h6,
 }
 
 .navbar-light .navbar-nav .nav-link {
-    font-family: 'Jost', sans-serif;
+    font-family: "Jost", sans-serif;
     padding: 35px 15px;
     font-size: 18px;
     color: var(--dark);
     outline: none;
-    transition: .5s;
+    transition: 0.5s;
 }
 
 .sticky-top.navbar-light .navbar-nav .nav-link {
@@ -130,7 +130,7 @@ h6,
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(9, 30, 62, .85);
+    background: rgba(9, 30, 62, 0.85);
     z-index: 1;
 }
 
@@ -190,24 +190,26 @@ h6,
 }
 
 .hero-header {
-    background: linear-gradient(rgba(9, 30, 62, .85), rgba(9, 30, 62, .85)), url(../img/carousel-1.jpg) center center no-repeat;
+    background: linear-gradient(rgba(9, 30, 62, 0.85), rgba(9, 30, 62, 0.85)),
+        url(../img/carousel-1.jpg) center center no-repeat;
     background-size: cover;
 }
 
 .bg-appointment {
-    background: linear-gradient(rgba(9, 30, 62, .85), rgba(9, 30, 62, .85)), url(../img/carousel-1.jpg) center center no-repeat;
+    background: linear-gradient(rgba(9, 30, 62, 0.85), rgba(9, 30, 62, 0.85)),
+        url(../img/carousel-1.jpg) center center no-repeat;
     background-size: cover;
 }
 
 .appointment-form {
-    background: rgba(6, 163, 218, .7);
+    background: rgba(6, 163, 218, 0.7);
 }
 
 .service-item img,
 .service-item .bg-light,
 .service-item .bg-light h5,
 .team-item .team-text {
-    transition: .5s;
+    transition: 0.5s;
 }
 
 .service-item:hover img {
@@ -222,10 +224,10 @@ h6,
     bottom: 0;
     left: 15px;
     right: 15px;
-    border-radius:100px / 15px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, .7);
+    border-radius: 100px / 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
     opacity: 0;
-    transition: .5s;
+    transition: 0.5s;
     z-index: -1;
 }
 
@@ -235,12 +237,12 @@ h6,
 }
 
 .bg-offer {
-    background:url(../img/carousel-1.jpg) center center no-repeat;
+    background: url(../img/carousel-1.jpg) center center no-repeat;
     background-size: cover;
 }
 
 .offer-text {
-    background: rgba(6, 163, 218, .85);
+    background: rgba(6, 163, 218, 0.85);
 }
 
 .price-carousel .owl-nav {
@@ -252,7 +254,7 @@ h6,
     display: flex;
     justify-content: space-between;
     opacity: 0;
-    transition: .5s;
+    transition: 0.5s;
 }
 
 .price-carousel:hover .owl-nav {
@@ -267,11 +269,11 @@ h6,
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #FFFFFF;
+    color: #ffffff;
     background: var(--primary);
     border-radius: 2px;
     font-size: 22px;
-    transition: .5s;
+    transition: 0.5s;
 }
 
 .price-carousel .owl-nav .owl-prev:hover,
@@ -285,7 +287,7 @@ h6,
 }
 
 .testimonial-carousel {
-    background: rgba(6, 163, 218, .85);
+    background: rgba(6, 163, 218, 0.85);
 }
 
 .testimonial-carousel .owl-nav {
@@ -307,11 +309,11 @@ h6,
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #FFFFFF;
+    color: #ffffff;
     background: var(--primary);
     border-radius: 2px;
     font-size: 22px;
-    transition: .5s;
+    transition: 0.5s;
 }
 
 .testimonial-carousel .owl-nav .owl-prev:hover,
@@ -322,4 +324,28 @@ h6,
 .testimonial-carousel .owl-item img {
     width: 120px;
     height: 120px;
+}
+
+/* Confeti css */
+
+.tk-message {
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    position: absolute;
+    z-index: 101;
+    align-items: center; /* alineación vertical */
+    justify-content: center;
+}
+
+#huye {
+    position: absolute;
+    left: calc(50% - 108px);
+    top: calc(50% + 160px);
+    transition: all 0.001s ease-in-out;
+}
+  
+#huye:hover {
+    transform: translate(-50px, -50px); /* distancia que el botón se moverá */
 }

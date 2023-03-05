@@ -1,3 +1,4 @@
+
 (function ($) {
     "use strict";
 
@@ -117,5 +118,93 @@
         ],
     });
     
+    
 })(jQuery);
+
+function explodeConfetti() {
+
+    (async () => {
+        await loadConfettiPreset(tsParticles); // this is required only if you are not using the bundle script
+      
+        await tsParticles.load("tsparticles", {
+            "background": {
+                color: "rgba(0,0,0,1)",
+                opacity: 0.9
+            },
+            "emitters": [
+                {
+                    life: {
+                      duration: 5,
+                      count: 2,
+                    },
+                    position: {
+                      x: 0,
+                      y: 40,
+                    },
+                    particles: {
+                      move: {
+                        direction: "top-right",
+                      },
+                    },
+                    size: {
+                        mode: 'percent',
+                        height: 10,
+                        width: 10
+                    },
+                  },
+                  {
+                    life: {
+                      duration: 5,
+                      count: 2,
+                    },
+                    position: {
+                      x: 100,
+                      y: 40,
+                    },
+                    size: {
+                        mode: 'percent',
+                        height: 10,
+                        width: 10
+                    },
+                    particles: {
+                      move: {
+                        direction: "top-left",
+                      },                    
+                    },
+                  },
+            ],
+          preset: "confetti",
+        });
+      })();
+
+    $(".tk-message").css('display', 'flex')
+
+}
+
+var boton = document.getElementById('huye');
+var body = document.querySelector('body');
+
+body.addEventListener('mousemove', function(event) {
+  var mouseX = event.clientX;
+  var mouseY = event.clientY;
+
+  var botonX = boton.offsetLeft + boton.offsetWidth / 2;
+  var botonY = boton.offsetTop + boton.offsetHeight / 2;
+  var distanciaX = mouseX - botonX;
+  var distanciaY = mouseY - botonY;
+  var distanciaTotal = Math.sqrt(distanciaX * distanciaX + distanciaY * distanciaY);
+
+  if (distanciaTotal < 150) { // la distancia mínima para que el botón empiece a moverse
+    var direccionX = -1 * distanciaX / distanciaTotal;
+    var direccionY = -1 * distanciaY / distanciaTotal;
+    var distanciaMoveX = direccionX * 10;
+    var distanciaMoveY = direccionY * 10;
+
+    boton.style.left = boton.offsetLeft + distanciaMoveX + 'px';
+    boton.style.top = boton.offsetTop + distanciaMoveY + 'px';
+  }
+});
+
+
+  
 
